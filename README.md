@@ -1,37 +1,38 @@
-Parkinson's Disease Prediction Project
+## Parkinson's Disease Prediction Project
 
-Overview
+## Overview
 
 This project focuses on predicting the Movement Disorder Society-Unified Parkinson's Disease Rating Scale (MDS-UPDRS) scores to measure Parkinson's disease progression using protein and peptide data. The primary task is regression to predict continuous UPDRS scores (1-4), with a secondary task of classification to predict binned UPDRS categories (Mild, Moderate, Severe). The dataset is sourced from the Kaggle competition: AMP®-Parkinson’s Disease Progression Prediction.
 
-Project Structure
+## Project Structure
 
 The project includes a Jupyter Notebook (Neural Network Code (1).ipynb) containing the implementation of various machine learning models and a PDF report (Parkinson’s Disease Prediction (MSE 546 Final Project) (5).pdf) summarizing the methodology, results, and insights.
 
-Files
+## Files
+
 Neural Network Code (1).ipynb: Jupyter Notebook with code for data preprocessing, model training (Linear Regression, Random Forest, KNN, Neural Network, and Classification), and performance visualization.
 Parkinson’s Disease Prediction (MSE 546 Final Project) (5).pdf: Comprehensive report detailing the project overview, data, methodology, evaluation metrics, results, and key takeaways.
 
-Dataset
+## Dataset
 Source: Kaggle dataset from the AMP®-Parkinson’s Disease Progression Prediction competition.
 Description: Merged dataset from clinical, supplemental clinical, peptide, and protein data, containing 4,838 entries and 10 columns.
 
 
 
-Features:
+## Features:
 Categorical: upd23b_clinical_state_on_medication (encoded as numerical values).
 Continuous: PeptideAbundance, NPX, visit_month.
 
 
 
-Preprocessing:
+## Preprocessing:
 Duplicates removed.
 Missing values filled with 0 or handled appropriately.
 Categorical variables encoded numerically.
 Features standardized for certain models (e.g., KNN, Neural Network).
 
 
-Models and Methodology
+## Models and Methodology
 
 The project implements and evaluates multiple machine learning models to predict UPDRS scores (1-4) and categorize them into severity levels:
 
@@ -77,7 +78,7 @@ Evaluated using precision, recall, and F1-score.
 
 Performance varies across UPDRS scores, with challenges in imbalanced classes.
 
-Evaluation Metrics
+## Evaluation Metrics
 
 Regression:
 
@@ -89,12 +90,12 @@ Symmetric Mean Absolute Percentage Error (SMAPE): Normalizes errors relative to 
 Classification:
 Precision, Recall, F1-score: Evaluates performance across severity levels.
 
-Results
+## Results
 Best Model: Neural Network with Batch Normalization (highest R²: 0.166, MAE: 4.64).
 
 
 
-Key Improvements:
+## Key Improvements:
 
 Reduced MAE from 5.16 (baseline) to 4.64 (Neural Network).
 Reduced RMSE from 7.84 (baseline) to 6.2 (Random Forest).
@@ -102,7 +103,7 @@ Improved R² from 0.056 (baseline) to 0.166 (Neural Network).
 Complementary Classifier: Random Forest Classifier provides quick severity categorization for clinical use.
 
 
-Key Takeaways
+## Key Takeaways
 
 The Neural Network outperforms other models with the highest R² (0.166) and lowest MAE (4.64).
 The upd23b_clinical_state_on_medication feature is critical for predicting Parkinson’s progression.
@@ -113,12 +114,12 @@ Enhanced models significantly reduce errors compared to the baseline.
 Challenges include high SMAPE (98.3% for Neural Network) and class imbalance in classification, suggesting future improvements like SMOTE for handling imbalanced data.
 
 
-Future Work
+## Future Work
 Address high SMAPE through advanced feature engineering or alternative loss functions.
 Apply techniques like SMOTE to handle class imbalance in classification.
 Explore additional models (e.g., Gradient Boosting, LSTM) for improved performance.
 
-References
+## References
 Kaggle: AMP®-Parkinson’s Disease Progression Prediction
 Murphy, Kevin P. Probabilistic Machine Learning: An Introduction. The MIT Press, 2022.
 
